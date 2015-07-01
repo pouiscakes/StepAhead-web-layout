@@ -1,0 +1,229 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-color: #505050;
+    padding:0;
+	margin:0;
+
+}
+
+.div {
+	display: inline-block;
+	padding:0;
+	margin:0;
+}
+
+a:link {
+    color: #fff;
+}
+
+/* visited link */
+a:visited {
+    color: #fff;
+}
+
+/* mouse over and selected link */
+a:hover, a:active {
+    color: #E6E6E6;
+    text-decoration: none;
+}
+
+.orange-border-top {
+	height: 4px; 
+	background: #e74810;
+	
+	padding-left:20px;	
+}
+
+.header-wrapper {
+    background-image: url("../images/headerimg.png");
+    background-size: 100% 100%;
+    position: relative;
+
+}
+
+
+.main-logo {
+	float:left;
+	position:absolute;
+	left:20px;
+	top:14px;
+}
+
+.odl-logo {
+	float:right;
+	position:absolute;
+	right:20px;
+}
+
+@media(max-width:768px) {
+	.odl-hidden {
+		width:0px; 
+		height:0px;
+	}
+}
+
+nav{
+	background: rgba(64,64,64,0) !important;
+	margin-top: 88px;
+}
+
+@media(max-width:768px) {
+	nav {
+		margin-top:20px;
+	}
+}
+
+.navbar-header {
+	margin-bottom: 14px;
+}
+
+.nav.navbar-nav li a {
+	color: #e6e6e6;
+	
+    letter-spacing: 0.5px;
+    font-size: 1em;
+
+	-webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+
+}
+
+.navigator-left li a {
+	text-transform: uppercase;
+}
+
+.navbar-right {
+	margin-right: 0px;
+}
+
+.nav.navbar-nav li a:hover {
+	color: #fff;
+    text-decoration: none;
+    background-color: rgba(255,255,255,.2);
+}
+
+/*
+@media(min-width:768px) {
+	.divider-vertical {
+		height: 50px;
+		border-right: 2px solid rgba(255,255,255,.2);
+	}
+}*/
+
+.dropdown-menu {
+	background-color: rgba(62,62,62,1);
+
+}
+
+/* SIDEBAR MAIN */
+.sidebar-custom {
+	background-image: url(https://www.stepaheadsolution.com/wp-content/uploads/2015/01/banner.png);
+	background-position: center; 
+  	background-size: cover;
+}
+
+/* MAIN CONTENT */
+.main-body {
+	margin-top: -20px;
+	padding-top: 40px;
+  	/*background: url(https://www.stepaheadsolution.com/wp-content/uploads/2015/01/banner.png) no-repeat top center;
+  	*/
+  	width: 100%;
+  	background: transparent;
+  	text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.item-page {
+	
+    color: #e6e6e6;
+    padding:0 5px;
+	display:block;
+	overflow:hidden;
+	text-align: center;
+}
+
+.col {
+	
+}
+
+.column1 {
+	margin-top: 10px;
+	text-align: right;
+}
+
+.input-sm {
+	  
+}
+.help-text {
+	text-align: left;
+	font-size: 12px;
+	font-style: italic;
+	color: #CCCCCC;
+	/* right edge
+	padding-left: 105px; */
+	padding-left: 15px;
+}
+
+@media(max-width:768px) {
+	.column1 {
+		text-align: left;
+		left: 50%;
+		margin-left: -120px
+	}
+	.column2 {
+		left: 50%;
+		margin-left: -125px;
+	}
+	.help-text {
+		left:50%;
+		/* right edge
+		margin-left: -35px; */
+		margin-left: -80px;
+	}
+}	
+
+.main-body h1 {
+	text-align: center;
+
+}
+
+.days {
+	float: left;
+	padding-right: 100px;
+}
+.hrs {
+	float: left;
+}
+.text-left {
+	margin-top: 8px;
+	margin-left:4px;
+	margin-right:4px;
+	float:left;
+}
+
+.create {
+	margin: 10px 4px;
+	border-color: #e84711; 
+	background-color: #e84711;
+	color:#fff;
+
+}
+@media(max-width:768px) {
+	.create {
+		margin-top: 30px;
+		margin-left: -20px;
+		margin-right: 28px;
+	}
+}
+
+.copyright-wrapper {
+	font-size: 12px;
+}
+
+
+
+
+
+
