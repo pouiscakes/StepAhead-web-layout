@@ -1,4 +1,4 @@
-<h1>Step Ahead CAPS Webpage</h1>
+<h1>Step Ahead CAPS Web Layout</h1>
 <p>A website layout I designed for the CAPS product page for Step Ahead Solutions.<br>
 Began 6/26/2015.</p>
 
