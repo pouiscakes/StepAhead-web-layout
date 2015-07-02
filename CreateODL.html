@@ -6,7 +6,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="shortcut icon" href="https://www.stepaheadsolution.com/wp-content/uploads/2015/01/favicon.png" type="image/x-icon" />
-	<title>ODL Vault</title>
+	<title>Create ODL</title>
 
 	<!--meta, EDIT LATER-->
 	<meta name="description" content="Step Ahead Solutions is a hybrid IT services provider delivering multiple services in cloud adoption, migration and computing."/>
@@ -18,14 +18,21 @@
 	<meta property="og:url" content="https://www.stepaheadsolution.com/" />
 	<meta property="og:site_name" content="Step Ahead Solution" />
 
+	<!--Footer CSS-->
+	<link rel='stylesheet' id='mxm-style-css'  href='https://www.stepaheadsolution.com/wp-content/themes/stepaheadsolution/style.css?ver=4.1.5' type='text/css' media='all' />
+	<link rel='stylesheet' id='mxm-foundation-css'  href='https://www.stepaheadsolution.com/wp-content/themes/stepaheadsolution/stylesheet/foundation-responsive.css?ver=4.1.5' type='text/css' media='all' />
 	<!--Local Font Awesome CSS-->
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--Local Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--Local sidebar CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
 	<!--Local custom CSS-->
 	<link href="css/styleODL.css" rel="stylesheet">
 	<!--Google font-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
 </head>
 
 <body>
@@ -61,155 +68,226 @@
 			      	</ul>
 			      
 			      	<ul class="nav navbar-nav navbar-right">
-			        	<li class="dropdown">
-				          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
-				          	<ul class="dropdown-menu">
-					            <li><a href="#">Security Groups</a></li>
-					            <li><a href="#">Key Pairs</a></li>
-					            <li><a href="#">Analytics</a></li>
-					            <li><a href="#">Admin</a></li>
-				          	</ul>
-			        	</li>
-				        <li><a href="#">Help</a></li>
+			      		<li><a href="#menu-toggle" id="menu-toggle">Toggle Menu</a></li>
 				        <li><a href="#">Logout</a></li>
+
 			    	</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
 
-	<!--Main body content-->
-	<div class="main-body">	
-       	<div id="contentarea">
-      		<div id="system-message-container"> </div>
-        	<span id="lblMessage"></span>
-      		<article class="item-page">
-	        <h1 style="margin-left:30px"><b>Create New ODL</b></h1>
-	            <div style="margin: 2px 0 4px 0; padding:15px; ">
-	              	<div id="contents">
+	<div id="wrapper" class="sidebar-custom">
+		<!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#">Step Ahead</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Security Groups</a></li>
+	            <li><a href="#">Key Pairs</a></li>
+	            <li><a href="#">Analytics</a></li>
+	            <li><a href="#">Help</a></li>
+            </ul>
+        </div> <!-- end sidebar-wrapper -->
 
-	              		<div class="col">
-	                    	<div class="col-sm-6 column1"></div>
-	                    	<div class="col-sm-6 help-text">Hover over an input box for help.</div>
-	                   	</div>
+		<!--Main body content-->
+		<div class="main-body">	
+	       	<div id="contentarea">
+	      		<div id="system-message-container"> </div>
+	        	<span id="lblMessage"></span>
+	      		<article class="item-page">
+	      		
+		        <h1 style="left:33%"><b>Create New ODL</b></h1>
+		            <div style="margin: 2px 0 4px 0; padding:15px; ">
+		              	<div id="contents">
 
-	                  	<div class="col">
-	                    	<div class="col-sm-6 column1">User Email ID</div>
-	                    	<div class="col-sm-6 column2">
-	                      		<input class="form-control input-sm" name="txtEmail" type="text" value="kjoseph@stepaheadsolution.com" readonly="readonly" id="txtEmail" disabled="disabled" style="color:#000; width:250px; padding:4px; margin:4px;" title="You may only use the current email that you are signed in with."/>
-	                    	</div>
-	                  	</div>
-			                  
-			            <div class="col">
-			                <div class="col-sm-6 column1">Cloud Provider</div>
-							<div class="col-sm-6 column2">
-	                         	<select class="form-control input-sm" name="cmbCloudProvider" id="cmbCloudProvider" style="color:#000; width:250px; padding:4px; margin:4px;" title="Select the appropriate Cloud Provider for your new ODL.">
-									<option value="---Please Select---">---Please Select---</option>
-									<option value="Amazon">Amazon</option>
-									<option value="Rackspace">Rackspace</option>
-									<option value="Oracle Cloud">Oracle Cloud</option>
-									<option value="GoGrid">GoGrid</option>
-								</select>
-	                    	</div>
-	                  	</div>
+		              		<div class="col">
+		                    	
+		                    	<div class="col-sm-5 column1"></div>
+		                    	<div class="col-sm-7 help-text">Hover over an input box for help.</div>
+		                   	</div>
 
-	                    <div class="col">
-	                    	<div class="col-sm-6 column1">Platform</div>
-	                    	<div class="col-sm-6 column2">
-	                      		<select class="form-control input-sm" name="cmbPlatform" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;cmbPlatform\&#39;,\&#39;\&#39;)&#39;, 0)" id="cmbPlatform" style="color:#000; width:250px; padding:4px; margin:4px;" title="Select the appropriate operating system for your new ODL.">
-									<option selected="selected" value="---Please Select---">---Please Select---</option>
-									<option value="windows">windows</option>
-									<option value="Linux">Linux</option>
-								</select>
-	                     	</div>
-	                    </div>
-	                  	<div class="col">
-	                    	<div class="col-sm-6 column1">ODL's</div>
-	                    	<div class="col-sm-6 column2">
-	                      		<select class="form-control input-sm" name="cmbODLs" id="cmbODLs" style="color:#000; width:250px; padding:4px; margin:4px;" title="Select from existing ODL's?">
-									<option value="0">--- Please Select ---</option>
-								</select>
-	                   	 	</div>
-	                  	</div>
-	                    <div class="col">
-	                    	<div class="col-sm-6 column1">ODL Name</div>
-	                    	<div class="col-sm-6 column2">
-	                      		<input class="form-control input-sm" name="txtODL" type="text" id="txtODL" style="color:#000; width:250px; padding:4px; margin:4px;" title="Enter the name of your new ODL."/>
-	                    	</div>
-	                  	</div>
-	                    <div class="col">
-	                        <div class="col-sm-6 column1">RAM Size</div>
-	                        <div class="col-sm-6 column2">
-	                            <select class="form-control input-sm" name="cmbRAM" id="cmbRAM" style="color:#000; width:250px; padding:4px; margin:4px;" title="Select the appropriate size of the RAM for your new ODL.">
-									<option value="0">--- Please Select ---</option>
-									<option value="m3.medium">m3.medium(3.75)GB</option>
-									<option value="m3.large">m3.large(7.5)GB</option>
-									<option value="m3.xlarge">m3.xlarge(15)GB</option>
-									<option value="m3.2xlarge">m3.2xlarge(30)GB</option>
-								</select>
-	                        </div>
-	                    </div>
-	                   
-	                    <div class="col">
-	                        <div class="col-sm-6 column1">Security Group</div>
-	                        <div class="col-sm-6 column2">
-	                            <select class="form-control input-sm" name="cmbSG" id="cmbSG" style="color:#000; width:250px; padding:4px; margin:4px;" title="Select the appropriate Security Group for your new ODL.">
-									<option value="0">--- Please Select ---</option>
-									<option value="1">-- Create New SecurityGroup --</option>
-									<option value="SharePoint2013">SharePoint2013</option>
-									<option value="OBIA11g">OBIA11g</option>
-									<option value="IERSDemo1">IERSDemo1</option>
-									<option value="IERSDemo2">IERSDemo2</option>
-									<option value="CAD Tools test">CAD Tools test</option>
-									<option value="Xavier demo">Xavier demo</option>
-									<option value="St. Xavier college demo1">St. Xavier college demo1</option>
-									<option value="loyola demo1">loyola demo1</option>
-									<option value="Windows2008R2">Windows2008R2</option>
-									<option value="win2008r2">win2008r2</option>
-									<option value="ORACLETESTING 111">ORACLETESTING 111</option>
-									<option value="Android App test 12345">Android App test 12345</option>
-									<option value="Adobe CC design">Adobe CC design</option>
-									<option value="Adobe Indesign">Adobe Indesign</option>
-									<option value="Adobe CC IN design sample">Adobe CC IN design sample</option>
-									<option value="Adobe design test">Adobe design test</option>
-								</select>
-	                       	</div>
-	                    </div>
-	                    
-	                    <div class="col">
-	                        <div class="col-sm-6 column1">Key Pair</div>
-	                        <div class="col-sm-6 column2">
-	                            <select class="form-control input-sm" name="cmbKeyPair" id="cmbKeyPair" style="color:#000; width:250px; padding:4px; margin:4px;" title="Select the appropriate Key Pair for your new ODL.">
-									<option value="---Please Select---">---Please Select---</option>
-									<option value=" Create New Key Pair"> Create New Key Pair</option>
-								</select>
-	                        </div>
-	                    </div>
-	                  	<div class="form-group">
-	                    	<div class="col-sm-6 column1">Duration</div>
-	                    	<div class="col-sm-6 column2">
-	                      		<input class="form-control input-sm days" name="txtdays" type="text" id="txtdays" style="color:#000; width:40px; padding:4px; margin:4px;" title="Select the amount of days that you would like your ODL to be active."/>
-	                      		<div class="text-left"> Days    </div>
-	                      		<input class="form-control input-sm hrs" name="txthrs" type="text" id="txthrs" style="color:#000; width:40px; padding:4px; margin:4px;" title="Select the amount of hours that you would like your ODL to be active."/>
-	                      		<div class="text-left"> Hours </div>
-	                      	</div>
-	                  	</div>
-	                  
-	                  	<div class="col">
-					  		<button type="submit" class="btn btn-lg create">Create ODL</button>
-						  	<button type="button" class="btn btn-lg create">Cancel</button>
-	                  	</div>
-	                </div> <!--contents-->
-	            </div> <!--div style margins-->
-	       	</article>
-	   	</div> <!-- end contentarea -->
-	</div> <!--end main body-->
+		                  	<div class="col">
+		                  		
+		                    	<div class="col-sm-5 column1">User Email ID</div>
+		                    	<div class="col-sm-7 column2">
+		                      		<input class="form-control input-sm" name="txtEmail" type="text" value="kjoseph@stepaheadsolution.com" readonly="readonly" id="txtEmail" disabled="disabled" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="You may only use the current email that you are signed in with."/>
+		                    	</div>
+		                  	</div>
+				                  
+				            <div class="col">
+				                <div class="col-sm-5 column1">Cloud Provider</div>
+								<div class="col-sm-7 column2">
+		                         	<select class="form-control input-sm" name="cmbCloudProvider" id="cmbCloudProvider" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Cloud Provider for your new ODL.">
+										<option value="---Please Select---">---Please Select---</option>
+										<option value="Amazon">Amazon</option>
+										<option value="Rackspace">Rackspace</option>
+										<option value="Oracle Cloud">Oracle Cloud</option>
+										<option value="GoGrid">GoGrid</option>
+									</select>
+		                    	</div>
+		                  	</div>
+
+		                    <div class="col">
+		                    	<div class="col-sm-5 column1">Platform</div>
+		                    	<div class="col-sm-7 column2">
+		                      		<select class="form-control input-sm" name="cmbPlatform" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;cmbPlatform\&#39;,\&#39;\&#39;)&#39;, 0)" id="cmbPlatform" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate operating system for your new ODL.">
+										<option selected="selected" value="---Please Select---">---Please Select---</option>
+										<option value="windows">windows</option>
+										<option value="Linux">Linux</option>
+									</select>
+		                     	</div>
+		                    </div>
+		                  	<div class="col">
+		                    	<div class="col-sm-5 column1">ODL's</div>
+		                    	<div class="col-sm-7 column2">
+		                      		<select class="form-control input-sm" name="cmbODLs" id="cmbODLs" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select from existing ODL's?">
+										<option value="0">--- Please Select ---</option>
+									</select>
+		                   	 	</div>
+		                  	</div>
+		                    <div class="col">
+		                    	<div class="col-sm-5 column1">ODL Name</div>
+		                    	<div class="col-sm-7 column2">
+		                      		<input class="form-control input-sm" name="txtODL" type="text" id="txtODL" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Enter the name of your new ODL."/>
+		                    	</div>
+		                  	</div>
+		                    <div class="col">
+		                        <div class="col-sm-5 column1">RAM Size</div>
+		                        <div class="col-sm-7 column2">
+		                            <select class="form-control input-sm" name="cmbRAM" id="cmbRAM" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate size of the RAM for your new ODL.">
+										<option value="0">--- Please Select ---</option>
+										<option value="m3.medium">m3.medium(3.75)GB</option>
+										<option value="m3.large">m3.large(7.5)GB</option>
+										<option value="m3.xlarge">m3.xlarge(15)GB</option>
+										<option value="m3.2xlarge">m3.2xlarge(30)GB</option>
+									</select>
+		                        </div>
+		                    </div>
+		                   
+		                    <div class="col">
+		                        <div class="col-sm-5 column1">Security Group</div>
+		                        <div class="col-sm-7 column2">
+		                            <select class="form-control input-sm" name="cmbSG" id="cmbSG" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Security Group for your new ODL.">
+										<option value="0">--- Please Select ---</option>
+										<option value="1">-- Create New SecurityGroup --</option>
+										<option value="SharePoint2013">SharePoint2013</option>
+										<option value="OBIA11g">OBIA11g</option>
+										<option value="IERSDemo1">IERSDemo1</option>
+										<option value="IERSDemo2">IERSDemo2</option>
+										<option value="CAD Tools test">CAD Tools test</option>
+										<option value="Xavier demo">Xavier demo</option>
+										<option value="St. Xavier college demo1">St. Xavier college demo1</option>
+										<option value="loyola demo1">loyola demo1</option>
+										<option value="Windows2008R2">Windows2008R2</option>
+										<option value="win2008r2">win2008r2</option>
+										<option value="ORACLETESTING 111">ORACLETESTING 111</option>
+										<option value="Android App test 12345">Android App test 12345</option>
+										<option value="Adobe CC design">Adobe CC design</option>
+										<option value="Adobe Indesign">Adobe Indesign</option>
+										<option value="Adobe CC IN design sample">Adobe CC IN design sample</option>
+										<option value="Adobe design test">Adobe design test</option>
+									</select>
+		                       	</div>
+		                    </div>
+		                    
+		                    <div class="col">
+		                        <div class="col-sm-5 column1">Key Pair</div>
+		                        <div class="col-sm-7 column2">
+		                            <select class="form-control input-sm" name="cmbKeyPair" id="cmbKeyPair" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Key Pair for your new ODL.">
+										<option value="---Please Select---">---Please Select---</option>
+										<option value=" Create New Key Pair"> Create New Key Pair</option>
+									</select>
+		                        </div>
+		                    </div>
+		                  	<div class="form-group">
+		                    	<div class="col-sm-5 column1">Duration</div>
+		                    	<div class="col-sm-7 column2">
+		                      		<input class="form-control input-sm days" name="txtdays" type="text" id="txtdays" style="color:#000; width:40px; padding:4px; margin:6px 0px;" title="Select the amount of days that you would like your ODL to be active."/>
+		                      		<div class="text-left"> Days    </div>
+		                      		<input class="form-control input-sm hrs" name="txthrs" type="text" id="txthrs" style="color:#000; width:40px; padding:4px; margin:6px 0px;" title="Select the amount of hours that you would like your ODL to be active."/>
+		                      		<div class="text-left"> Hours </div>
+		                      	</div>
+		                  	</div>
+		                  
+		                  	<div class="col">
+		                  		<div class="col-sm-12">
+							  		<button type="submit" class="btn btn-lg create">Create ODL</button>
+								  	<button type="button" class="btn btn-lg create">Cancel</button>
+								</div>
+		                  	</div>
+		                </div> <!--contents-->
+		            </div> <!--div style margins-->
+		       	</article>
+
+		       	<div class="mobile-menu">
+		       		<ul>
+		                <li><a href="#">Admin</a></li>
+		                <li><a href="#">Security Groups</a></li>
+			            <li><a href="#">Key Pairs</a></li>
+			            <li><a href="#">Analytics</a></li>
+			            <li><a href="#">Help</a></li>
+	            	</ul>
+	        	</div>
+		       	<p><br><br><br><br><br><br></p>
+		   	</div> <!-- end contentarea -->
+		</div> <!--end main body-->
+	</div> <!--end wrapper-->
+
+	<div class="footer-wrapper boxed-style"> <!-- Get Footer Widget -->
+		<div class="container">
+			<div class="copyright-wrapper">			
+				<div class="copyright-left">
+					<div class="socialiconcontainerfooter"><a href="https://www.facebook.com/stepaheadsolutionsinc" target="_blank"><img src="https://www.stepaheadsolution.com/wp-content/uploads/2015/04/facebook.png" /></a>
+						<a href="https://twitter.com/StepAheadS" target="_blank"><img src="https://www.stepaheadsolution.com/wp-content/uploads/2015/04/twitter.png" /></a>
+						<a href="https://plus.google.com/" target="_blank"><img src="https://www.stepaheadsolution.com/wp-content/uploads/2015/04/gplus.png" /></a>
+						<a href="https://www.youtube.com/channel/UCZuyR8dIczxfyZNjJJcmGHA" target="_blank"><img src="https://www.stepaheadsolution.com/wp-content/uploads/2015/04/youtube.png" /></a>
+						<a href="https://www.linkedin.com/company/step-ahead-solutions-inc." target="_blank"><img src="https://www.stepaheadsolution.com/wp-content/uploads/2015/04/1428320157_06_linkedin-128.png" /></a>
+					</div>
+					© 2015 Step Ahead Solutions, Ins. All Rights Reserved
+				</div>
+				<div class="copyright-right">
+					<div class="custom-sidebar widget_text" id="text-15" >
+						<div class="textwidget"><a href="http://privacy.truste.com/privacy-seal/Step-Ahead-Solutions/validation?rid=c954b4f0-cd4e-43bd-97d3-c05fb033a964" target="_blank"><img src="https://www.stepaheadsolution.com/wp-content/uploads/2015/03/logo.png"  class="footerimagecopy"/></a>
+						</div>
+					</div>
+					<div class="custom-sidebar widget_nav_menu footer-right-text" id="nav_menu-2" >
+						<div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-836"><a href="https://www.stepaheadsolution.com/about-us/">About us</a></li>
+<li id="menu-item-701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-701"><a href="https://www.stepaheadsolution.com/site-index/">Site Index</a></li>
+<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="https://www.stepaheadsolution.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-835"><a href="https://www.stepaheadsolution.com/about-us/legal/safe-harbor-privacy-policy/">Safe Harbor &#038; Privacy Policy</a></li>
+<li id="menu-item-834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-834"><a href="https://www.stepaheadsolution.com/about-us/core-values/">Core Values</a></li>
+<li id="menu-item-700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-700"><a href="https://www.stepaheadsolution.com/careers/">Careers</a></li>
+<li id="menu-item-833" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-833"><a href="https://www.stepaheadsolution.com/about-us/partners/">Partners</a></li>
+<li id="menu-item-832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"><a href="https://www.stepaheadsolution.com/about-us/management/">Management</a></li>
+<li id="menu-item-831" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-831"><a href="https://www.stepaheadsolution.com/about-us/press-room/">Press Room</a></li>
+<li id="menu-item-830" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-830"><a href="https://www.stepaheadsolution.com/about-us/legal/">Legal</a></li>
+<li id="menu-item-829" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-829"><a href="https://secure.stepaheadsolution.com/support">Support</a></li>
+<li id="menu-item-194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194"><a href="https://www.stepaheadsolution.com/about-us/legal/terms-of-use/">Terms of Use</a></li>
+<li id="menu-item-195" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-195"><a href="https://www.stepaheadsolution.com/about-us/legal/safe-harbor-privacy-policy/">Privacy</a></li>
+<li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a href="https://www.stepaheadsolution.com/about-us/legal/copyright-policy/">Copyright</a></li>
+</ul>
+						</div>
+					</div>							
+				</div>
+			</div>
+		</div>
+	</div><!-- footer wrapper -->	
 
 	<!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
 </body>
 
 </html>

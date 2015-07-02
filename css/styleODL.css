@@ -222,7 +222,17 @@ nav{
 	font-size: 12px;
 }
 
+.mobile-menu a {
+	margin: 10px;
 
+}
+@media(min-width: 786px) {
+	.mobile-menu {
+		font-size: 0px;
+		text-align: center;
+
+	}
+}
 
 
 
