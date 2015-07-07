@@ -5,9 +5,10 @@ Began 6/26/2015.</p>
 <h3>Update: 7/6/2015</h3>
 <p>
 <b>NEW: Initial UI for "Create ODL" and "ODL Vault" page.</b> This is a working version that I'm releasing for the back-end team to start connecting the ODL UI to the ODL server.
-<ul><li>New features:</li>
+<ul>New features:
 <li>Highlighted nav bar</li>
 <li>Compacted interface</li>
+<li>ODL Vault</li>
 </ul>
 </p>
 <img src="http://puu.sh/iPJw6/e252555710.png" /><img src="http://puu.sh/iPJxO/a5e3c23a34.png" />
