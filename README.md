@@ -12,7 +12,7 @@ Began 6/26/2015.</p>
 </ul>
 </p>
 <img src="http://puu.sh/iPJw6/e252555710.png" /><img src="http://puu.sh/iPJxO/a5e3c23a34.png" />
-
+<p> </p>
 
 <h3>Update: 7/1/2015</h3>
 <p>
