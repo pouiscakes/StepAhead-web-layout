@@ -108,8 +108,8 @@ ul.sf-menu li {
 }
 
 .menu-item:hover {
-	border-bottom: 2px solid red;
-	margin-bottom: -2px;
+	border-bottom: 1px solid #e74810;
+	margin-bottom: -1px;
 
 }
 
@@ -138,20 +138,32 @@ ul.sf-menu li {
 }
 
 
-/* SIDEBAR MAIN */
+/* SIDEBAR CUSTOM */
 .sidebar-custom {
 	background-image: url(https://www.stepaheadsolution.com/wp-content/uploads/2015/01/banner.png);
 	background-position: center; 
   	background-size: cover;
+
+}
+
+.sidebar-banner {
+	background-color: rgba(0,0,0,.3);
+	margin-top:-20px;
+	padding-top:20px;
+}
+
+.sidebar-title {
+    text-align: center; 
+    font-weight: 300;
 }
 
 .logged-in {
 	text-align: center;
 	margin-top:0px;
-	padding-top: 20px;
+	padding-top: 0px;
 	padding-bottom:20px;
 	color: #e84711;
-	background-color: rgba(0,0,0,.3);
+	
 
 }
 
@@ -173,14 +185,20 @@ ul.sf-menu li {
 
 .vault {
 	color: #e84711;
-	margin-top:40px !important;
+	margin-top:-4.5px !important;
+	margin-left:0px !important;
+}
+@media(max-width:768px) {
+	.vault {
+		margin-left: 0px !important;
+	}
 }
 
 .vault-grid {
-	border-radius: 2px;
+	border-radius: 0px;
 	margin-bottom:15px;
-	overflow:auto;
-	background-color: #e84711 !important;
+	overflow:scroll;
+	background-color: transparent !important;
 
 
 }
