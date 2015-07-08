@@ -101,7 +101,7 @@
 						<div>
 						<table class="grid-label" cellspacing="2" cellpadding="3" rules="all" id="SavedODLGridView" style="border-color:#DEBA84;border-width:1px;border-style:None;height:30px;width:30px;">
 							<tr style="color:White;background-color:#A55129;font-weight:bold;">
-								<th scope="col">Select</th><th align="center" scope="col" style="width:200px;">ODL Name</th><th align="center" scope="col" style="width:200px;">User ID</th><th align="center" scope="col" style="width:200px;">ODL ID</th><th align="center" scope="col" style="width:200px;">Platform</th><th align="center" scope="col" style="width:200px;">SavedTime</th>
+								<th scope="col">Select</th><th align="center" scope="col" style="width:120px;" nowrap="nowrap">ODL Name</th><th align="center" scope="col" style="width:200px;">User ID</th><th align="center" scope="col" style="width:100px;" nowrap="nowrap">ODL ID</th><th align="center" scope="col" style="width:200px;">Platform</th><th align="center" scope="col" style="width:200px;">SavedTime</th>
 							</tr><tr style="background-color:#FFFFCC;border-color:Yellow;">
 								<td>
                                     <input id="SavedODLGridView_RadioButton1_0" type="radio" name="SavedODLGridView$ctl02$RadioButton1" value="RadioButton1" onclick="javascript:CheckOtherIsCheckedByGVID(this);" />
@@ -145,7 +145,7 @@
 						</div>
 					</div>	
                 <div>
-                <input class="vault-button" type="submit" name="btn_LaunchODL" value="Launch ODL" onclick="if(typeof(Page_ClientValidate)==&#39;function&#39;){if(Page_ClientValidate()==false){return false;}}this.value=&#39;Please Wait&#39;;this.disabled=true;__doPostBack(&#39;btn_LaunchODL&#39;,&#39;&#39;);" id="btn_LaunchODL"/>
+                <input class="vault-button" type="submit" name="btn_LaunchODL" value="Launch ODL" onclick="if(typeof(Page_ClientValidate)==&#39;function&#39;){if(Page_ClientValidate()==false){return false;}}this.value=&#39;Please Wait&#39;;this.disabled=true;__doPostBack(&#39;btn_LaunchODL&#39;,&#39;&#39;);" id="btn_LaunchODL" style="margin-left:20px !important"/>
                 <input class="vault-button" type="submit" name="btn_Delete" value="Delete ODL" onclick="if(typeof(Page_ClientValidate)==&#39;function&#39;){if(Page_ClientValidate()==false){return false;}}this.value=&#39;Please Wait&#39;;this.disabled=true;__doPostBack(&#39;btn_Delete&#39;,&#39;&#39;);" id="btn_Delete"  />
                 <input class="vault-button" type="submit" name="btn_Refresh" value="Refresh" id="btn_Refresh" />
             </div>      
