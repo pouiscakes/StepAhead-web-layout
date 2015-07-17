@@ -9,6 +9,7 @@ Began 6/26/2015.</p>
 <li>Registration form validation</li>
 <li>Improved header and footer design</li>
 <li>ODL Vault grid style</li>
+<li>Responsive Create ODL form based on responses</li>
 </ul>
 </p>
 <img src="http://puu.sh/j2lmM/b97b6dc29d.png" /><img src="http://puu.sh/j2low/418729d94c.png" />
