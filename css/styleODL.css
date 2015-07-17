@@ -187,7 +187,7 @@ ul.sf-menu li {
 	background-image: url(https://www.stepaheadsolution.com/wp-content/uploads/2015/01/banner.png);
 	background-position: center; 
   	background-size: cover;
-  	min-height: 500px;
+  	min-height: 550px;
 
 }
 
@@ -243,14 +243,15 @@ ul.sf-menu li {
 	border-radius: 0px;
 	margin-bottom:15px;
 	overflow:scroll;
-	background-color: transparent !important;
+
 
 
 }
 
+/*
 .grid-label {
 	border-color:#D1400F;border-width:1px;border-style:None;height:30px;width:30px;
-}
+}*/
 
 
 
@@ -381,11 +382,6 @@ button, input[type="submit"], input[type="reset"], input[type="button"] {
 		margin-left: -20px !important;
 		margin-right: 28px !important;
 	}
-}
-
-/*LOGIN*/
-.form-signin {
-	margin-top: 50px;
 }
 
 /* Footer */

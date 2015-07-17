@@ -63,30 +63,13 @@
 		<div class="main-body">	
 	       	
 
-			<div class="container">
-
-		      <form class="form-signin" id="validate" autocomplete="on">
-		      	<div id="toggle-register">
-			        <h1 class="form-signin-heading">ODL Login</h1>
-			        <label for="inputEmail" class="sr-only">Email ID</label>
-			        <input type="email" id="inputEmail" class="form-control login-emailID" placeholder="Email ID" required autofocus>
-			        <label for="inputPassword" class="sr-only">Password</label>
-			        <input type="password" id="inputPassword" class="form-control login-password" placeholder="Password" required>
-			        <div class="checkbox">
-			          <label>
-			            <input type="checkbox" value="remember-me"> Remember me
-			          </label>
-			        </div>
-			        <button class="login-button" type="submit" onclick="location.href='ODLVault.html';">Sign in</button>
-				    <div class="login-bottom-text">
-				        <a href="ODLRegister.html" id="register">Register</a> &middot;
-				        <a href="#">Forgot password?</a> 
-				    </div>
-			        <!--link straight to ODL Vault: onclick="location.href='ODLVault.html';"  -->
-			    </div>    
-		      </form>
-
-		    </div> <!-- /container -->
+			<div class="jumbotron" style="background:transparent;">
+		      <div class="container" style="background-color: rgba(0,0,0,.2); text-align:center; border-radius:10px; padding-bottom:15px;">
+		        <h1 style="font-size:36px;">Registration Successful!</h1>
+		        <p style="font-size:18px; margin:30px 0px;">A verification code has been sent to your email.</p>
+		        <p><a class="login-button" style="text-shadow:none;" href="ODLLogin.html" role="button">Back to Login &raquo;</a></p>
+		      </div>
+   		 	</div>
 		       	<p><br><br><br></p>
 		   	</div> <!-- end contentarea -->
 		</div> <!--end main body-->
@@ -141,79 +124,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-
-    <script>
-		function toggleRegister() {
-		    var registerHTML = '<h1 class="form-signin-heading">Register</h1>' +
-		        '<input type="text" id="inputFirstName" class="form-control register-first-name" placeholder="First Name" required autofocus>' +
-		        '<input type="text" id="inputLastName" class="form-control register-last-name" placeholder="Last Name" required>' +
-		        '<input type="email" id="inputEmail" name="username" class="form-control register-emailID" placeholder="Email ID" required>' +
-		        '<input type="password" id="inputPassword" name="pwd1" class="form-control register-password" placeholder="Password" required>' +
-		        '<input type="password" id="inputConfirmPassword" name="pwd2" class="form-control register-confirm-password" placeholder="Confirm Password" required>' +
-		        
-		        '<button class="login-button" type="submit" onclick="checkForm();">Register</button>' +
-		        '<div class="login-bottom-text"><p>Already have an account? &nbsp;</p><a href="ODLLogin.html" id="login"> Login</a></div>';
-			$('#toggle-register').replaceWith(registerHTML);
-		}
-	</script>
-
-	<script type="text/javascript">
-
-	  function checkForm()
-	  {
-	  	var form = document.getElementByID('validate');
-		alert("Entered");
-	    if(form.username.value == "") {
-	      alert("Error: Username cannot be blank!");
-	      form.username.focus();
-	      return false;
-	    }
-
-	    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
-	      if(form.pwd1.value.length < 6) {
-	        alert("Error: Password must contain at least six characters!");
-	        form.pwd1.focus();
-	        return false;
-	      }
-	      re = /[0-9]/;
-	      if(!re.test(form.pwd1.value)) {
-	        alert("Error: password must contain at least one number (0-9)!");
-	        form.pwd1.focus();
-	        return false;
-	      }
-	      re = /[a-z]/;
-	      if(!re.test(form.pwd1.value)) {
-	        alert("Error: password must contain at least one lowercase letter (a-z)!");
-	        form.pwd1.focus();
-	        return false;
-	      }
-	      re = /[A-Z]/;
-	      if(!re.test(form.pwd1.value)) {
-	        alert("Error: password must contain at least one uppercase letter (A-Z)!");
-	        form.pwd1.focus();
-	        return false;
-	      }
-	    } else {
-	      alert("Error: Please check that you've entered and confirmed your password!");
-	      form.pwd1.focus();
-	      return false;
-	    }
-
-		
-	    alert("You entered a valid password: " + form.pwd1.value);
-	    location.href="https://www.stepaheadsolution.com";
-	    return true;
-	  }
-	  
-
-	</script>
+    
 
 </body>
 

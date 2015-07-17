@@ -100,7 +100,7 @@
 		              	<form id="contents">
 		              		<div class="col">
 		                    	<div class="col-sm-5 column1"></div>
-		                    	<div class="col-sm-7 help-text">Hover over an input box for help.</div>
+		                    	<div class="col-sm-7 help-text">Mouse over an input box for help.</div>
 		                   	</div>  
 				            <div class="col">
 		                    	<div class="col-sm-5 column1">ODL Name</div>
@@ -111,34 +111,35 @@
 				            <div class="col">
 				                <div class="col-sm-5 column1">Cloud Provider</div>
 								<div class="col-sm-7 column2">
-		                         	<select class="form-control input-sm" name="cmbCloudProvider" id="cmbCloudProvider" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Cloud Provider for your new ODL.">
+		                         	<select class="form-control input-sm" name="cmbCloudProvider" id="cmbCloudProvider" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Cloud Provider for your new ODL." onChange="ifAmazon(this);" >
 										<option value="---Please Select---">---Please Select---</option>
 										<option value="Amazon">Amazon</option>
 										<option value="Rackspace">Rackspace</option>
 										<option value="Oracle Cloud">Oracle Cloud</option>
 										<option value="GoGrid">GoGrid</option>
 									</select>
+									
 		                    	</div>
 		                  	</div>
 		                    <div class="col">
 		                    	<div class="col-sm-5 column1">Platform</div>
 		                    	<div class="col-sm-7 column2">
-		                      		<select class="form-control input-sm" name="cmbPlatform" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;cmbPlatform\&#39;,\&#39;\&#39;)&#39;, 0)" id="cmbPlatform" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate operating system for your new ODL.">
-										<option selected="selected" value="---Please Select---">---Please Select---</option>
-										<option value="windows">windows</option>
+		                      		<select class="form-control input-sm" name="cmbPlatform" id="cmbPlatform" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate operating system for your new ODL." onChange="ifLinux(this);" >
+										<option value="---Please Select---">---Please Select---</option>
+										<option value="windows">Windows</option>
 										<option value="Linux">Linux</option>
 									</select>
 		                     	</div>
 		                    </div>
 		                  	<div class="col">
-		                    	<div class="col-sm-5 column1">ODL's</div>
+		                    	<div class="col-sm-5 column1">ODL List</div>
 		                    	<div class="col-sm-7 column2">
 		                      		<select class="form-control input-sm" name="cmbODLs" id="cmbODLs" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select from existing ODL's from ODL Vault">
 										<option value="0">--- Please Select ---</option>
 									</select>
 		                   	 	</div>
 		                  	</div>
-		                    <div class="col">
+		                    <div class="col" id="add-security">
 		                        <div class="col-sm-5 column1">RAM Size</div>
 		                        <div class="col-sm-7 column2">
 		                            <select class="form-control input-sm" name="cmbRAM" id="cmbRAM" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate size of the RAM for your new ODL.">
@@ -150,40 +151,7 @@
 									</select>
 		                        </div>
 		                    </div>
-		                    <div class="col">
-		                        <div class="col-sm-5 column1 help-link"><a href="https://www.stepaheadsolution.com">Security Group</a></div>
-		                        <div class="col-sm-7 column2">
-		                            <select class="form-control input-sm" name="cmbSG" id="cmbSG" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Security Group for your new ODL. Click Security Group to learn more.">
-										<option value="0">--- Please Select ---</option>
-										<option value="1">-- Create New SecurityGroup --</option>
-										<option value="SharePoint2013">SharePoint2013</option>
-										<option value="OBIA11g">OBIA11g</option>
-										<option value="IERSDemo1">IERSDemo1</option>
-										<option value="IERSDemo2">IERSDemo2</option>
-										<option value="CAD Tools test">CAD Tools test</option>
-										<option value="Xavier demo">Xavier demo</option>
-										<option value="St. Xavier college demo1">St. Xavier college demo1</option>
-										<option value="loyola demo1">loyola demo1</option>
-										<option value="Windows2008R2">Windows2008R2</option>
-										<option value="win2008r2">win2008r2</option>
-										<option value="ORACLETESTING 111">ORACLETESTING 111</option>
-										<option value="Android App test 12345">Android App test 12345</option>
-										<option value="Adobe CC design">Adobe CC design</option>
-										<option value="Adobe Indesign">Adobe Indesign</option>
-										<option value="Adobe CC IN design sample">Adobe CC IN design sample</option>
-										<option value="Adobe design test">Adobe design test</option>
-									</select>
-		                       	</div>
-		                    </div>
-		                    <div class="col">
-		                        <div class="col-sm-5 column1 help-link"><a href="https://www.stepaheadsolution.com">Key Pair</a></div>
-		                        <div class="col-sm-7 column2">
-		                            <select class="form-control input-sm" name="cmbKeyPair" id="cmbKeyPair" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Key Pair for your new ODL. Click Key Pair to learn more.">
-										<option value="---Please Select---">---Please Select---</option>
-										<option value=" Create New Key Pair"> Create New Key Pair</option>
-									</select>
-		                        </div>
-		                    </div>
+		                    
 		                  	<div class="form-group">
 		                    	<div class="col-sm-5 column1">Duration</div>
 		                    	<div class="col-sm-7 column2">
@@ -211,6 +179,7 @@
 			            <li><a href="#">Key Pairs</a></li>
 			            <li><a href="#">Analytics</a></li>
 			            <li><a href="#">Help</a></li>
+			            <li><a href="https://secure.stepaheadsolution.com/support" target="_blank">Helpdesk</a></li>
 			            <li><a href="#">Logout</a></li>
 	            	</ul>
 	        	</div>
@@ -276,6 +245,42 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+    <script>
+    	function ifAmazon(x) {
+    		if(x.value != "Amazon") {
+    			$("#security-div").remove();
+    			$("#keypair-div").remove();
+    		}
+			if(x.value == "Amazon") {
+				$("#security-div").remove();
+				$("#keypair-div").remove();
+			    $("#add-security").append('<div id="security-div" class="col">'+
+		                        '<div class="col-sm-5 column1 help-link" id="security-link"><a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-network-security.html" target="_blank">Security Group</a></div>'+
+		                        '<div class="col-sm-7 column2">'+
+		                            '<select class="form-control input-sm" name="cmbSG" id="cmbSG" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Security Group for your new ODL. Click Security Group to learn more.">'+
+										'<option value="0">--- Please Select ---</option><option value="1">-- Create New SecurityGroup --</option><option value="SharePoint2013">SharePoint2013</option><option value="OBIA11g">OBIA11g</option><option value="IERSDemo1">IERSDemo1</option><option value="IERSDemo2">IERSDemo2</option><option value="CAD Tools test">CAD Tools test</option><option value="Xavier demo">Xavier demo</option><option value="St. Xavier college demo1">St. Xavier college demo1</option><option value="loyola demo1">loyola demo1</option><option value="Windows2008R2">Windows2008R2</option><option value="win2008r2">win2008r2</option><option value="ORACLETESTING 111">ORACLETESTING 111</option><option value="Android App test 12345">Android App test 12345</option><option value="Adobe CC design">Adobe CC design</option><option value="Adobe Indesign">Adobe Indesign</option><option value="Adobe CC IN design sample">Adobe CC IN design sample</option><option value="Adobe design test">Adobe design test</option></select></div></div>'+
+		                    '<div class="col" id="keypair-div">'+
+		                        '<div class="col-sm-5 column1 help-link"><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html" target="_blank">Key Pair</a></div>'+
+		                        '<div class="col-sm-7 column2">'+
+		                            '<select class="form-control input-sm" name="cmbKeyPair" id="cmbKeyPair" style="color:#000; width:250px; padding:4px; margin:6px 0px;" title="Select the appropriate Key Pair for your new ODL. Click Key Pair to learn more.">'+
+										'<option value="---Please Select---">---Please Select---</option><option value=" Create New Key Pair"> Create New Key Pair</option></select></div></div>');
+			}
+		}
+	</script>
+	<script>
+		function ifLinux(platform) {
+    		if(platform.value == "Linux") {
+    			alert("linux");
+    			$("#security-link").html('<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html" target="_blank">Security Group</a>'
+    				);
+    		}
+    		if(platform.value == "windows") {
+    			alert("windows");
+    			$("#security-link").html('<a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-network-security.html" target="_blank">Security Group</a>'
+    				);
+    		}
+    	}
+	</script>	
 
 </body>
 
