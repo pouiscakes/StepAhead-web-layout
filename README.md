@@ -2,6 +2,18 @@
 <p>A website layout I designed for the CAPS product page for Step Ahead Solutions.<br>
 Began 6/26/2015.</p>
 
+<h3>Update: 7/17/2015</h3>
+<p>
+<b>NEW: Login/Registration pages.</b> Working login and register layouts ready for back-end support. Redone CSS style sheets - page styles no longer rely on the Step Ahead website.
+<ul>New features:
+<li>Registration form validation</li>
+<li>Improved header and footer design</li>
+<li>ODL Vault grid style</li>
+</ul>
+</p>
+<img src="http://puu.sh/j2lmM/b97b6dc29d.png" /><img src="http://puu.sh/j2low/418729d94c.png" />
+<p> </p>
+
 <h3>Update: 7/6/2015</h3>
 <p>
 <b>NEW: Initial UI for "Create ODL" and "ODL Vault" page.</b> This is a working version that I'm releasing for the back-end team to start connecting the ODL UI to the ODL server.
